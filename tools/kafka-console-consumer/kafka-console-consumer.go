@@ -95,11 +95,7 @@ func main() {
 
 	go func() {
 		for msg := range messages {
-			fmt.Printf("Partition:\t%d\n", msg.Partition)
-			fmt.Printf("Offset:\t%d\n", msg.Offset)
-			fmt.Printf("Key:\t%s\n", string(msg.Key))
-			fmt.Printf("Value:\t%s\n", string(msg.Value))
-			fmt.Println()
+			fmt.Println(string(msg.Value))
 		}
 	}()
 
