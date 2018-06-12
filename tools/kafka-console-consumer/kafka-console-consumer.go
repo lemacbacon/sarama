@@ -95,7 +95,7 @@ func main() {
 
 	go func() {
 		for msg := range messages {
-			fmt.Println(string(msg.Value))
+			fmt.Println("=>" + string(msg.Value))
 		}
 	}()
 
